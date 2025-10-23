@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html#estudo-de-caso---o-fio-condutor-do-aprendizado",
-    "href": "index.html#estudo-de-caso---o-fio-condutor-do-aprendizado",
+    "objectID": "index.html#estudo-de-caso",
+    "href": "index.html#estudo-de-caso",
     "title": "Engenharia de Dados do Zero à Produção.",
-    "section": "Estudo de Caso - O Fio Condutor do Aprendizado ",
-    "text": "Estudo de Caso - O Fio Condutor do Aprendizado \nVamos construir, do zero, uma plataforma de dados de um E-commerce moderno.\nCada fase reflete uma necessidade real de negócio, e cada decisão técnica é feita com propósito - essa é a essência de pensar engenharia de dados orientada a produto.\nEsse empresa vende produtos online (ex: roupas, eletrônicos, suplementos, etc.) e investe em campanhas de marketing digital (Facebook Ads, Google Ads, e-mail marketing, etc.).\nOs dados vêm de duas principais fontes:\n- API de pedidos e clientes (JSON aninhado) - simulando um sistema tipo Shopify. - Arquivos CSV com dados de campanhas - custo, cliques, impressões, conversões (estilo Facebook Ads ou Google Ads).\nNecessidades de Negócio:\n- Quais campanhas trazem mais vendas?\n- Qual o ROI (retorno sobre investimento) das campanhas?\n- Quais clientes estão mais propensos a recomprar ou cancelar?\nRespostas da Engenharia:\n- Criar pipeline moderno e robusto que cruza pedidos (API) com campanhas (CSV).\n- Modelar fatos e dimensões com custos, receita e margem.\n- Disponibilizar base confiável para modelos de churn/conversão (Machine Learning)."
+    "section": "Estudo de Caso ",
+    "text": "Estudo de Caso \nVamos construir, do zero, uma plataforma de dados de um E-commerce moderno.\nCada fase reflete uma necessidade real de negócio, e cada decisão técnica é feita com propósito - essa é a essência de pensar engenharia de dados orientada a produto.\nEsse empresa vende produtos online (ex: roupas, eletrônicos, suplementos, etc.) e investe em campanhas de marketing digital (Facebook Ads, Google Ads, e-mail marketing, etc.).\nOs dados vêm de duas principais fontes:\n- API de pedidos e clientes (JSON aninhado) - simulando um sistema tipo Shopify. - Arquivos CSV com dados de campanhas - custo, cliques, impressões, conversões (estilo Facebook Ads ou Google Ads).\nNecessidades de Negócio:\n- Quais campanhas trazem mais vendas?\n- Qual o ROI (retorno sobre investimento) das campanhas?\n- Quais clientes estão mais propensos a recomprar ou cancelar?\nRespostas da Engenharia:\n- Criar pipeline moderno e robusto que cruza pedidos (API) com campanhas (CSV).\n- Modelar fatos e dimensões com custos, receita e margem.\n- Disponibilizar base confiável para modelos de churn/conversão (Machine Learning)."
   },
   {
     "objectID": "index.html#motivação",
