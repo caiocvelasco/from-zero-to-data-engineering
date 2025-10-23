@@ -5,34 +5,63 @@ format: html
 
 <a name="topo"></a>
 
-> Da Extração ao Pipeline em Produção - construindo uma plataforma de dados moderna, passo a passo.
+<p align="center">
+  <img src="images/de.jpg" alt="dados" width="600" />
+</p>
 
-Nesta jornada, você vai aprender como os dados realmente fluem: desde arquivos brutos (como o _.CSV_) e APIs com JSONS complexos, até sistemas automatizados prontos para alimentar análises, relatórios e produtos de dados.
+> Te treinando para ser valioso no mercado:   
+> -> Data Engineer Completo com visão orientada a Produto (_Product-Oriented Mindset_).
+
+## Estudo de Caso <a name="caso"></a>
+
+Vamos construir, **do zero**, uma **plataforma de dados de um E-commerce moderno**.
+
+Cada fase reflete uma necessidade real de negócio, e cada decisão técnica é feita com propósito - essa é a essência de pensar engenharia de dados orientada a produto.
+
+Esse empresa vende produtos online (ex: roupas, eletrônicos, suplementos, etc.) e investe em campanhas de marketing digital (Facebook Ads, Google Ads, e-mail marketing, etc.).
+
+Os dados vêm de duas principais fontes:  
+- API de pedidos e clientes (JSON aninhado) - simulando um sistema tipo Shopify.
+- Arquivos CSV com dados de campanhas - custo, cliques, impressões, conversões (estilo Facebook Ads ou Google Ads).
+
+Necessidades de Negócio:  
+- Quais campanhas trazem mais vendas?  
+- Qual o ROI (retorno sobre investimento) das campanhas?  
+- Quais clientes estão mais propensos a recomprar ou cancelar?
+
+Respostas da Engenharia:  
+- Criar pipeline **moderno e robusto** que cruza pedidos (API) com campanhas (CSV).  
+- Modelar fatos e dimensões com custos, receita e margem.  
+- Disponibilizar base confiável para modelos de churn/conversão (_Machine Learning_).
 
 ## Motivação <a name="motivacao"></a>
 
 Aprendi Engenharia de Dados **do zero**.
-Não foi em um curso formal nem em um programa de treinamento, mas ao longo de uma jornada real de trabalho e reinvenção. Nessa jornada, um mentor que me orientou.
+Não foi em um curso formal nem em um programa de treinamento, mas ao longo de uma jornada real de trabalho e reinvenção. Fiz tudo **sozinho**, mas tive um empurrão de um mentor, a quem tenho bastante carinho (_Obrigado, Guilherme!_).
 
-Depois de concluir meu mestrado nos EUA, embarquei num PhD de prestígio na Holanda. Infelizmente, a vida é incerta e tive que retornar ao Brasil por conta da Pandemia, sem finalizar o programa. 
+Depois de concluir meu mestrado nos EUA, embarquei num PhD de prestígio na Holanda. Infelizmente, a vida é incerta e tive que retornar ao Brasil por conta da pandemia, sem finalizar o programa. 
 
 Decidi me tornar PJ no Brasil e começar a trabalhar para consultorias de dados americanas. 
 
-Sem querer, descobri **um novo mundo**: pipelines complexos, warehouses modernos e times inteiros organizados em torno do _Snowflake_ e _dbt_, além de boas práticas que, até então, eu só via em posts no LinkedIn.
+Sem querer, descobri **um novo mundo**: _a Engenharia de Dados_.  
 
-Foi nesse contexto "aleatório" que entrei em Engenharia de Dados. Comecei a construir pipelines completos do zero: desde a ingestão de dados (APIs, S3, CSVs) até o versionamento e a modelagem incremental com dbt-core.
+- Pipelines complexos, Warehouses modernos e times inteiros organizados em torno do cliente.
+
+Foi nesse contexto "aleatório" que entrei em Engenharia de Dados. Comecei a construir pipelines completos do zero: desde a ingestão de dados de fontes diversas (APIs, S3, CSVs) até o versionamento e a modelagem incremental com dbt-core.
 
 Trabalhei com empresas de diversos países - desde consultorias de dados nos EUA a projetos com a FENG Brasil, responsável por usar dados para impulsionar os programas de sócio-torcedor dos maiores clubes do país (_Flamengo, Fluminense, Vasco, Botafogo, São Paulo, Internacional, Coritiba, etc_) - implementando o dbt, estratégias incrementais e ajudando em projetos de Machine Learning.
 
-Do outro lado do oceano, a vida também caminhava: retornei à Europa como Nômade Digital, estabeleci base em Barcelona e iniciei o processo de cidadania espanhola - uma decisão pessoal que acabou simbolizando essa jornada de autonomia e aprendizado contínuo.
+Do outro lado do oceano, a vida também caminhava: retornei à Europa como Nômade Digital, estabeleci base em _Barcelona_ e iniciei o processo de cidadania espanhola - uma decisão pessoal que acabou simbolizando essa jornada de autonomia e aprendizado contínuo.
 
 Essa trajetória me deu liberdade, propósito e uma vontade enorme de compartilhar o que aprendi - **passo a passo** - com quem também quer trilhar esse caminho.
 
-**Não sou nenhum "Jedi" dos dados e não tenho "10 anos" de experiência**. Mas acredito que posso te ajudar a sair do zero. 😉
+Disclaimer:  
+**Não sou nenhum "Jedi" dos dados e não tenho "10 anos" de experiência**.  
+Mas acredito que posso te ajudar a sair do zero. 😉
 
 ## Objetivo do Curso <a name="objetivo"></a>
 
-Dar uma formação sólida em **Engenharia de Dados Moderna**, mostrando **como projetar, construir e operar pipelines reais**, de forma mais **agnóstica possível* em relação ao Data Warehouse usado (Snowflake, BigQuery, Databricks, etc.).
+Dar uma formação sólida em **Engenharia de Dados Moderna**, mostrando **como projetar, construir e operar pipelines reais**, de forma mais **agnóstica possível** em relação ao Data Warehouse usado (Snowflake, BigQuery, Databricks, etc.) e com o sabor mais importante: **Visão Orientada a Produto**.
 
 Você vai compreender:
 
@@ -44,10 +73,10 @@ Você vai compreender:
 
 Este curso é do ZERO!
 
-Ele foi pensado para quem quer **entender o que realmente acontece dentro de um pipeline** - mesmo que nunca tenha trabalhado como Engenheiro de Dados antes.
+Ele foi pensado para quem quer **entender o que realmente acontece dentro de um pipeline** - mesmo que nunca tenha trabalhado com Engenharia de Dados antes.
 
-Há apenas 1 pré-requisito que te recomendo fazer para te deixar mais confortável:
-- Curso Básico de SQL (gratuito, em torno de 4 horas): https://www.w3schools.com/sql/default.asp
+Há apenas 1 pré-requisito que te recomendo fazer para te deixar mais confortável:  
+- [Curso Básico de SQL da W3](https://www.w3schools.com/sql/default.asp) (gratuito, em torno de 4 horas)
 
 O restante, eu vou ensinar.
 
@@ -65,6 +94,17 @@ A fase 0, é gratuita. Ela é apenas a preparação do seu computador.
 | **3** | *O Mundo em Tempo Real* | Escalabilidade e orquestração | Airflow, Kafka, PySpark, monitoração e performance | Pipeline streaming + DAG completa de orquestração | _Consigo lidar com dados em tempo real e coordenar jobs complexos._ |
 
 ## Fase 1 – Do Zero à Engenharia de Dados
+
+**Visão de Negócio**  
+O e-commerce quer entender de onde vem o seu faturamento - quais campanhas geram mais vendas e quais produtos são mais lucrativos.
+
+Nesta fase, você vai construir o pipeline que cruza:  
+- Pedidos e clientes (API JSON)  
+- Campanhas de marketing (CSV)
+
+O foco é integrar essas fontes e criar as tabelas-base: `dim_customers`, `dim_products`, `fact_orders`, `fact_campaigns`. Aqui nasce o data warehouse que permitirá análises de receita, custo e ROI.
+
+👉 A engenheiria de dados é responsável por garantir que o fluxo da informação - da origem até a tabela final - seja confiável, limpo e bem modelado.
 
 **Objetivo**  
 Entender como os dados fluem, como se transformam e como modelar um pipeline limpo e eficiente.
@@ -85,6 +125,13 @@ Entender como os dados fluem, como se transformam e como modelar um pipeline lim
 
 ## Fase 2 – Do Pipeline ao Sistema Confiável
 
+**Visão de Negócio**  
+O e-commerce agora depende dos dados para decidir onde investir em marketing e como otimizar margens e campanhas.
+
+Para isso, o pipeline precisa ser confiável, testável e governado. Nesta fase, você transforma o que antes era bastante manual: implementa `dbt`, cria testes automáticos, documenta fontes e modelos, garante os acessos e permissões corretas para os usuários e configura `CI/CD` no GitHub.
+
+Tudo isso garante que métricas como ROI, CAC e Lifetime Value sejam calculadas corretamente, mesmo com mudanças nas fontes de dados.
+
 **Objetivo**  
 Transformar o pipeline em algo que **poderia rodar em produção** - com testes, versionamento, CI/CD e governança.
 
@@ -103,6 +150,14 @@ Transformar o pipeline em algo que **poderia rodar em produção** - com testes,
 > “Transforme seu pipeline em algo que poderia rodar em produção - com testes, governança e deploy automático.”
 
 ## Fase 3 – O Mundo em Tempo Real
+
+**Visão de Negócio**  
+Com a operação madura, o e-commerce quer monitorar em tempo real o desempenho das campanhas e detectar quedas de performance ou picos de vendas.
+
+O engenheiro de dados implementa orquestração e streaming, permitindo que:  
+- Novas vendas sejam processadas assim que chegam da API, relatórios sejam atualizados automaticamente (`Airflow` DAGs), alertas sejam disparados quando houver anomalias.
+
+Esse tipo de sistema orienta decisões diárias de marketing - como ajustar orçamentos ou prever picos de demanda - e serve de base para análises de churn e conversão em um futuro curso de _Machine Learning_.
 
 **Objetivo**  
 Dar o salto para pipelines **vivos e automatizados**, que rodam continuamente e reagem a eventos.
@@ -123,11 +178,11 @@ Dar o salto para pipelines **vivos e automatizados**, que rodam continuamente e 
 
 ## Formato
 
-- **Aulas gravadas, curtas e progressivas**  
+- **Duração**: de 6 a 8 semanas, aproximadamente 2 semenas por fase.
+- **Aulas gravadas, direto ao ponto e progressivas**, liberadas semanalmente  
 - **Exercícios práticos em SQL, dbt e nas demais ferramentas**, sempre com passo a passo e soluções  
-- **Casos com JSONs e CSVs** (simulando e-commerce e marketing)  
-- **Mentoria e comunidade** para dúvidas e projetos  
-- **Repositório GitHub aberto** com dataset e exemplos
+- **Comunidade**, para dúvidas e não nos sentirmos sozinhos
+- **Networking**, para potenciais contratações futuras de empresas brasileiras (CLT) ou americanas (PJ).
 
 ## Preço <a name="preco"></a>
 
@@ -146,7 +201,7 @@ O curso foi separado em fases, cada uma vendida como um produto separado (ou com
 
 Quer ser avisado quando abrirem as inscrições?
 
-<iframe src=""
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8b0DX8V8wmRBTVPvLO95702feG7D4LHSTs_vGZi9AXN5U9w/viewform?usp=publish-editor"
 width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 
 ---

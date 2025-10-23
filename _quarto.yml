@@ -9,6 +9,8 @@ website:
     left:
       - text: "Início"
         href: "#topo"
+      - text: "Estudo de Caso"
+        href: "#caso"  
       - text: "Motivação"
         href: "#motivacao"
       - text: "Objetivo"
