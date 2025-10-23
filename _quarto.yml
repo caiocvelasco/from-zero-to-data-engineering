@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: ""
+  description: "Um curso completo sobre engeharia de dados moderna."
+  navbar:
+    left:
+      - text: "Início"
+        href: "#topo"
+      - text: "Motivação"
+        href: "#motivacao"
+      - text: "Objetivo"
+        href: "#objetivo"  
+      - text: "Pré-requisitos"
+        href: "#requisitos"
+      - text: "Conteúdo"
+        href: "#conteudo"
+      - text: "Preço"
+        href: "#preco"
+      - text: "Inscreva-se"
+        href: "#formulario"
+      - text: "Sobre"
+        href: "#sobre"
+  page-footer:
+    left: "© 2025 Caio Velasco"
+    right: "Construído com ❤️ e Quarto"
+
+format:
+  html:
+    theme: flatly    # cosmo or litera, simplex, flatly for readability
+    smooth-scroll: false
+    css: styles.css

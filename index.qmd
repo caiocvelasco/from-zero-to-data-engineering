@@ -1,0 +1,165 @@
+---
+title: "Engenharia de Dados do Zero à Produção."
+format: html
+---
+
+<a name="topo"></a>
+
+> Da Extração ao Pipeline em Produção - construindo uma plataforma de dados moderna, passo a passo.
+
+Nesta jornada, você vai aprender como os dados realmente fluem: desde arquivos brutos (como o _.CSV_) e APIs com JSONS complexos, até sistemas automatizados prontos para alimentar análises, relatórios e produtos de dados.
+
+## Motivação <a name="motivacao"></a>
+
+Aprendi Engenharia de Dados **do zero**.
+Não foi em um curso formal nem em um programa de treinamento, mas ao longo de uma jornada real de trabalho e reinvenção. Nessa jornada, um mentor que me orientou.
+
+Depois de concluir meu mestrado nos EUA, embarquei num PhD de prestígio na Holanda. Infelizmente, a vida é incerta e tive que retornar ao Brasil por conta da Pandemia, sem finalizar o programa. 
+
+Decidi me tornar PJ no Brasil e começar a trabalhar para consultorias de dados americanas. 
+
+Sem querer, descobri **um novo mundo**: pipelines complexos, warehouses modernos e times inteiros organizados em torno do _Snowflake_ e _dbt_, além de boas práticas que, até então, eu só via em posts no LinkedIn.
+
+Foi nesse contexto "aleatório" que entrei em Engenharia de Dados. Comecei a construir pipelines completos do zero: desde a ingestão de dados (APIs, S3, CSVs) até o versionamento e a modelagem incremental com dbt-core.
+
+Trabalhei com empresas de diversos países - desde consultorias de dados nos EUA a projetos com a FENG Brasil, responsável por usar dados para impulsionar os programas de sócio-torcedor dos maiores clubes do país (_Flamengo, Fluminense, Vasco, Botafogo, São Paulo, Internacional, Coritiba, etc_) - implementando o dbt, estratégias incrementais e ajudando em projetos de Machine Learning.
+
+Do outro lado do oceano, a vida também caminhava: retornei à Europa como Nômade Digital, estabeleci base em Barcelona e iniciei o processo de cidadania espanhola - uma decisão pessoal que acabou simbolizando essa jornada de autonomia e aprendizado contínuo.
+
+Essa trajetória me deu liberdade, propósito e uma vontade enorme de compartilhar o que aprendi - **passo a passo** - com quem também quer trilhar esse caminho.
+
+**Não sou nenhum "Jedi" dos dados e não tenho "10 anos" de experiência**. Mas acredito que posso te ajudar a sair do zero. 😉
+
+## Objetivo do Curso <a name="objetivo"></a>
+
+Dar uma formação sólida em **Engenharia de Dados Moderna**, mostrando **como projetar, construir e operar pipelines reais**, de forma mais **agnóstica possível* em relação ao Data Warehouse usado (Snowflake, BigQuery, Databricks, etc.).
+
+Você vai compreender:
+
+- Como os dados são extraídos, transformados e governados em pipelines reais.  
+- Como construir sistemas de dados que **não quebram**, são **testáveis** e **fáceis de escalar**.  
+- E como aplicar práticas de **engenharia de software** (CI/CD, versionamento, automação) ao mundo dos dados.
+
+## Pré-requisitos <a name="requisitos"></a>
+
+Este curso é do ZERO!
+
+Ele foi pensado para quem quer **entender o que realmente acontece dentro de um pipeline** - mesmo que nunca tenha trabalhado como Engenheiro de Dados antes.
+
+Há apenas 1 pré-requisito que te recomendo fazer para te deixar mais confortável:
+- Curso Básico de SQL (gratuito, em torno de 4 horas): https://www.w3schools.com/sql/default.asp
+
+O restante, eu vou ensinar.
+
+## Conteúdo - Curso Completo em 3 Fases<a name="conteudo"></a>
+
+O curso foi separado em **fases**, cada fase será um produto **vendido separadamente**, como verá mais adiante.
+
+A fase 0, é gratuita. Ela é apenas a preparação do seu computador.
+
+| Fase | Nome | Tema | Foco | Produto final | Valor Percebido |
+|------|----------------|---------------|---------------|----------------|------------------|
+| **0** | *Ambiente e Setup* | Preparação da máquina e do ambiente de trabalho | Instalação do VS Code, Git, Python, criação de venv, conta no GitHub, setup de repositório e acesso ao warehouse | Ambiente local funcional e organizado, pronto para rodar pipelines | _Agora eu tenho uma máquina configurada como a de um engenheiro de dados profissional._ |
+| **1** | *Do Zero à Engenharia de Dados* | Fundamentos e pipeline limpo | EL→T, SQL, modelagem, camadas Bronze–Silver–Gold | Pipeline estático e limpo, rodando localmente ou no warehouse | _Aprendi como os dados fluem - consigo montar meu próprio data warehouse._ |
+| **2** | *Do Pipeline ao Sistema Confiável* | Automação, testes e governança | dbt, testes de qualidade, CI/CD, GitHub Actions, RBAC | Pipeline automatizado, versionado, testado e monitorado | _Meu pipeline é de verdade - roda sozinho e detecta erros._ |
+| **3** | *O Mundo em Tempo Real* | Escalabilidade e orquestração | Airflow, Kafka, PySpark, monitoração e performance | Pipeline streaming + DAG completa de orquestração | _Consigo lidar com dados em tempo real e coordenar jobs complexos._ |
+
+## Fase 1 – Do Zero à Engenharia de Dados
+
+**Objetivo**  
+Entender como os dados fluem, como se transformam e como modelar um pipeline limpo e eficiente.
+
+**Blocos Principais**  
+1. Como os dados se movem (ETL vs ELT e Medallion Architecture)  
+2. SQL e modelagem (DDL, DML, dimensões e fatos)  
+3. Capturando mudanças (MERGE, Incrementais, SCD1 e SCD2)  
+4. Fundamentos de uma arquitetura moderna (Foco no Snowflake - visão agnóstica)  
+5. Construindo o primeiro pipeline EL→T end-to-end  
+6. Modelagem e camadas Bronze–Silver–Gold  
+
+**Entrega**  
+- Pipeline completo (JSON + CSV → warehouse → tabelas na última camada).  
+- Documentação clara e lógica de modelagem.  
+
+> “Aprenda a construir do zero um pipeline moderno, entendendo como os dados realmente fluem dentro de empresas modernas.”
+
+## Fase 2 – Do Pipeline ao Sistema Confiável
+
+**Objetivo**  
+Transformar o pipeline em algo que **poderia rodar em produção** - com testes, versionamento, CI/CD e governança.
+
+**Blocos Principais**  
+1. Introdução ao **dbt** e Implementação (projeto modular, `models`, `sources`, `refs`)  
+2. Testes de qualidade (`not_null`, `unique`, `relationships`, `accepted_values`)  
+3. Documentação e lineage (dbt docs e metadados)  
+4. Integração Contínua (**GitHub Actions** + deploy automático)  
+5. Governança e RBAC  
+6. Mini orquestração (Snowflake Tasks, Cloud Scheduler)  
+
+**Entrega**  
+- Projeto **dbt** completo, testado, versionado e com deploy automatizado.  
+- Workflow confiável e auditável.  
+
+> “Transforme seu pipeline em algo que poderia rodar em produção - com testes, governança e deploy automático.”
+
+## Fase 3 – O Mundo em Tempo Real
+
+**Objetivo**  
+Dar o salto para pipelines **vivos e automatizados**, que rodam continuamente e reagem a eventos.
+
+**Blocos Principais**  
+1. Conceitos de streaming e eventos (CDC, filas, partições)  
+2. Ingestão em tempo real com **Kafka**  
+3. PySpark e processamento distribuído 
+4. Orquestração com **Airflow**  
+5. Monitoração e alertas (logs, falhas, métricas)  
+6. Performance e otimização de custo  
+
+**Entrega**  
+- Pipeline em tempo real com DAG completa e observabilidade básica.  
+- Entendimento prático de orquestração e escalabilidade.  
+
+> “Aprenda o que realmente diferencia um pipeline profissional: automação, tempo real e orquestração com Airflow e Kafka.”
+
+## Formato
+
+- **Aulas gravadas, curtas e progressivas**  
+- **Exercícios práticos em SQL, dbt e nas demais ferramentas**, sempre com passo a passo e soluções  
+- **Casos com JSONs e CSVs** (simulando e-commerce e marketing)  
+- **Mentoria e comunidade** para dúvidas e projetos  
+- **Repositório GitHub aberto** com dataset e exemplos
+
+## Preço <a name="preco"></a>
+
+O curso foi separado em fases, cada uma vendida como um produto separado (ou com desconto caso queira o curso completo). A fase 0 é gratuita.
+
+| Fase | Curso | Preço Potencial | Motivação |
+|------|-----------------|----------------|----------------------|
+| **Fase 1** | Fundamentos | R$ 599 | _Agora você domina o fluxo de dados. Está pronto para levar isso à produção_. |
+| **Fase 2** | Especialização 1 (nível júnior → pleno) | R$ 399 | _Seu pipeline funciona - mas precisa ser automatizado e lidar com falhas para rodar em Produção_ |
+| **Fase 3** | Especialização 2 (nível pleno → sênior) | R$ 399 | _Seu pipelines está vivo e automatizado, rodando continuamente e reagindo a eventos._ |
+
+- Curso Completo - sem desconto: **R$1397**  
+- Curso Completo - com desconto: **R$ 999** (leve a última fase de graça!)
+
+## Inscreva-se <a name="formulario"></a>
+
+Quer ser avisado quando abrirem as inscrições?
+
+<iframe src=""
+width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+
+---
+
+<a name="sobre"></a>
+<p align="center">
+  <img src="images/caio.jpg" alt="Caio Velasco" width="180" style="border-radius: 50%; margin-top: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+</p>
+
+**Caio Velasco** é Engenheiro Mecânico _Cum Laude_ pela **UFRJ** e Mestre em Economia e Políticas Públicas pela **UCLA**, com bolsa da Fundação Lemann. Atualmente mora em Barcelona, na Espanha.
+
+Depois de pausar um doutorado em Economia na Holanda durante a pandemia, passou a atuar remotamente em **Projetos de Engenharia e Ciência de Dados**, ajudando empresas dos EUA, Europa e Brasil a construírem **plataformas modernas de dados**.
+
+A paixão por ensinar o levou a criar cursos que unem **fundamentos de engenharia, clareza conceitual e prática real** - mostrando **como pensar como um engenheiro de dados**, e não apenas escrever código.
+
+> 💡 “Meu objetivo é ensinar com clareza e propósito - conectando o pensamento analítico à prática real de engenharia de dados.”

@@ -1,0 +1,84 @@
+/* --------- Tipografia e layout --------- */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+  max-width: 1100px !important;  /* ← increase from 850px */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  padding-top: 90px !important; /* 👈 pushes content below the fixed navbar */
+}
+
+/* --------- Cabeçalhos --------- */
+h1, h2, h3 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* --------- Tabelas --------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* --------- Citações / blocos --------- */
+blockquote {
+  background-color: #f9fafb;
+  border-left: 4px solid #26af8b;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0;
+  color: #374151;
+  font-style: italic;
+}
+
+/* --------- Iframe (Google Form) --------- */
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* --------- Rodapé --------- */
+.quarto-page-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 1.5rem 0;
+}
+
+/* --- Keep the navbar fixed and prevent content from hiding under it --- */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #26af8b;
+}
+
+.nav-link {
+  color: #f8f9fa;
+}
+
+html {
+  scroll-padding-top: 100px !important; /* adjust to match your navbar height */
+  scroll-behavior: smooth;
+}
