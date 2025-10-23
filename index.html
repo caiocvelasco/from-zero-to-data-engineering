@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Engenharia de Dados do Zero à Produção.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cc63fce9873912f1bbbccf05079cc9ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./#topo"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#motivacao"> 
+<span class="menu-text">Motivação</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#objetivo"> 
+<span class="menu-text">Objetivo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#requisitos"> 
+<span class="menu-text">Pré-requisitos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#conteudo"> 
+<span class="menu-text">Conteúdo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#preco"> 
+<span class="menu-text">Preço</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#formulario"> 
+<span class="menu-text">Inscreva-se</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#sobre"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Engenharia de Dados do Zero à Produção.</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a name="topo"></a></p>
+<blockquote class="blockquote">
+<p>Da Extração ao Pipeline em Produção - construindo uma plataforma de dados moderna, passo a passo.</p>
+</blockquote>
+<p>Nesta jornada, você vai aprender como os dados realmente fluem: desde arquivos brutos (como o <em>.CSV</em>) e APIs com JSONS complexos, até sistemas automatizados prontos para alimentar análises, relatórios e produtos de dados.</p>
+<section id="motivação" class="level2">
+<h2 class="anchored" data-anchor-id="motivação">Motivação <a name="motivacao"></a></h2>
+<p>Aprendi Engenharia de Dados <strong>do zero</strong>. Não foi em um curso formal nem em um programa de treinamento, mas ao longo de uma jornada real de trabalho e reinvenção. Nessa jornada, um mentor que me orientou.</p>
+<p>Depois de concluir meu mestrado nos EUA, embarquei num PhD de prestígio na Holanda. Infelizmente, a vida é incerta e tive que retornar ao Brasil por conta da Pandemia, sem finalizar o programa.</p>
+<p>Decidi me tornar PJ no Brasil e começar a trabalhar para consultorias de dados americanas.</p>
+<p>Sem querer, descobri <strong>um novo mundo</strong>: pipelines complexos, warehouses modernos e times inteiros organizados em torno do <em>Snowflake</em> e <em>dbt</em>, além de boas práticas que, até então, eu só via em posts no LinkedIn.</p>
+<p>Foi nesse contexto “aleatório” que entrei em Engenharia de Dados. Comecei a construir pipelines completos do zero: desde a ingestão de dados (APIs, S3, CSVs) até o versionamento e a modelagem incremental com dbt-core.</p>
+<p>Trabalhei com empresas de diversos países - desde consultorias de dados nos EUA a projetos com a FENG Brasil, responsável por usar dados para impulsionar os programas de sócio-torcedor dos maiores clubes do país (<em>Flamengo, Fluminense, Vasco, Botafogo, São Paulo, Internacional, Coritiba, etc</em>) - implementando o dbt, estratégias incrementais e ajudando em projetos de Machine Learning.</p>
+<p>Do outro lado do oceano, a vida também caminhava: retornei à Europa como Nômade Digital, estabeleci base em Barcelona e iniciei o processo de cidadania espanhola - uma decisão pessoal que acabou simbolizando essa jornada de autonomia e aprendizado contínuo.</p>
+<p>Essa trajetória me deu liberdade, propósito e uma vontade enorme de compartilhar o que aprendi - <strong>passo a passo</strong> - com quem também quer trilhar esse caminho.</p>
+<p><strong>Não sou nenhum “Jedi” dos dados e não tenho “10 anos” de experiência</strong>. Mas acredito que posso te ajudar a sair do zero. 😉</p>
+</section>
+<section id="objetivo-do-curso" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-do-curso">Objetivo do Curso <a name="objetivo"></a></h2>
+<p>Dar uma formação sólida em <strong>Engenharia de Dados Moderna</strong>, mostrando <strong>como projetar, construir e operar pipelines reais</strong>, de forma mais **agnóstica possível* em relação ao Data Warehouse usado (Snowflake, BigQuery, Databricks, etc.).</p>
+<p>Você vai compreender:</p>
+<ul>
+<li>Como os dados são extraídos, transformados e governados em pipelines reais.<br>
+</li>
+<li>Como construir sistemas de dados que <strong>não quebram</strong>, são <strong>testáveis</strong> e <strong>fáceis de escalar</strong>.<br>
+</li>
+<li>E como aplicar práticas de <strong>engenharia de software</strong> (CI/CD, versionamento, automação) ao mundo dos dados.</li>
+</ul>
+</section>
+<section id="pré-requisitos" class="level2">
+<h2 class="anchored" data-anchor-id="pré-requisitos">Pré-requisitos <a name="requisitos"></a></h2>
+<p>Este curso é do ZERO!</p>
+<p>Ele foi pensado para quem quer <strong>entender o que realmente acontece dentro de um pipeline</strong> - mesmo que nunca tenha trabalhado como Engenheiro de Dados antes.</p>
+<p>Há apenas 1 pré-requisito que te recomendo fazer para te deixar mais confortável: - Curso Básico de SQL (gratuito, em torno de 4 horas): https://www.w3schools.com/sql/default.asp</p>
+<p>O restante, eu vou ensinar.</p>
+</section>
+<section id="conteúdo---curso-completo-em-3-fases" class="level2">
+<h2 class="anchored" data-anchor-id="conteúdo---curso-completo-em-3-fases">Conteúdo - Curso Completo em 3 Fases<a name="conteudo"></a></h2>
+<p>O curso foi separado em <strong>fases</strong>, cada fase será um produto <strong>vendido separadamente</strong>, como verá mais adiante.</p>
+<p>A fase 0, é gratuita. Ela é apenas a preparação do seu computador.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 18%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 18%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Nome</th>
+<th>Tema</th>
+<th>Foco</th>
+<th>Produto final</th>
+<th>Valor Percebido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><em>Ambiente e Setup</em></td>
+<td>Preparação da máquina e do ambiente de trabalho</td>
+<td>Instalação do VS Code, Git, Python, criação de venv, conta no GitHub, setup de repositório e acesso ao warehouse</td>
+<td>Ambiente local funcional e organizado, pronto para rodar pipelines</td>
+<td><em>Agora eu tenho uma máquina configurada como a de um engenheiro de dados profissional.</em></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><em>Do Zero à Engenharia de Dados</em></td>
+<td>Fundamentos e pipeline limpo</td>
+<td>EL→T, SQL, modelagem, camadas Bronze–Silver–Gold</td>
+<td>Pipeline estático e limpo, rodando localmente ou no warehouse</td>
+<td><em>Aprendi como os dados fluem - consigo montar meu próprio data warehouse.</em></td>
+</tr>
+<tr class="odd">
+<td><strong>2</strong></td>
+<td><em>Do Pipeline ao Sistema Confiável</em></td>
+<td>Automação, testes e governança</td>
+<td>dbt, testes de qualidade, CI/CD, GitHub Actions, RBAC</td>
+<td>Pipeline automatizado, versionado, testado e monitorado</td>
+<td><em>Meu pipeline é de verdade - roda sozinho e detecta erros.</em></td>
+</tr>
+<tr class="even">
+<td><strong>3</strong></td>
+<td><em>O Mundo em Tempo Real</em></td>
+<td>Escalabilidade e orquestração</td>
+<td>Airflow, Kafka, PySpark, monitoração e performance</td>
+<td>Pipeline streaming + DAG completa de orquestração</td>
+<td><em>Consigo lidar com dados em tempo real e coordenar jobs complexos.</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fase-1-do-zero-à-engenharia-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="fase-1-do-zero-à-engenharia-de-dados">Fase 1 – Do Zero à Engenharia de Dados</h2>
+<p><strong>Objetivo</strong><br>
+Entender como os dados fluem, como se transformam e como modelar um pipeline limpo e eficiente.</p>
+<p><strong>Blocos Principais</strong><br>
+1. Como os dados se movem (ETL vs ELT e Medallion Architecture)<br>
+2. SQL e modelagem (DDL, DML, dimensões e fatos)<br>
+3. Capturando mudanças (MERGE, Incrementais, SCD1 e SCD2)<br>
+4. Fundamentos de uma arquitetura moderna (Foco no Snowflake - visão agnóstica)<br>
+5. Construindo o primeiro pipeline EL→T end-to-end<br>
+6. Modelagem e camadas Bronze–Silver–Gold</p>
+<p><strong>Entrega</strong><br>
+- Pipeline completo (JSON + CSV → warehouse → tabelas na última camada).<br>
+- Documentação clara e lógica de modelagem.</p>
+<blockquote class="blockquote">
+<p>“Aprenda a construir do zero um pipeline moderno, entendendo como os dados realmente fluem dentro de empresas modernas.”</p>
+</blockquote>
+</section>
+<section id="fase-2-do-pipeline-ao-sistema-confiável" class="level2">
+<h2 class="anchored" data-anchor-id="fase-2-do-pipeline-ao-sistema-confiável">Fase 2 – Do Pipeline ao Sistema Confiável</h2>
+<p><strong>Objetivo</strong><br>
+Transformar o pipeline em algo que <strong>poderia rodar em produção</strong> - com testes, versionamento, CI/CD e governança.</p>
+<p><strong>Blocos Principais</strong><br>
+1. Introdução ao <strong>dbt</strong> e Implementação (projeto modular, <code>models</code>, <code>sources</code>, <code>refs</code>)<br>
+2. Testes de qualidade (<code>not_null</code>, <code>unique</code>, <code>relationships</code>, <code>accepted_values</code>)<br>
+3. Documentação e lineage (dbt docs e metadados)<br>
+4. Integração Contínua (<strong>GitHub Actions</strong> + deploy automático)<br>
+5. Governança e RBAC<br>
+6. Mini orquestração (Snowflake Tasks, Cloud Scheduler)</p>
+<p><strong>Entrega</strong><br>
+- Projeto <strong>dbt</strong> completo, testado, versionado e com deploy automatizado.<br>
+- Workflow confiável e auditável.</p>
+<blockquote class="blockquote">
+<p>“Transforme seu pipeline em algo que poderia rodar em produção - com testes, governança e deploy automático.”</p>
+</blockquote>
+</section>
+<section id="fase-3-o-mundo-em-tempo-real" class="level2">
+<h2 class="anchored" data-anchor-id="fase-3-o-mundo-em-tempo-real">Fase 3 – O Mundo em Tempo Real</h2>
+<p><strong>Objetivo</strong><br>
+Dar o salto para pipelines <strong>vivos e automatizados</strong>, que rodam continuamente e reagem a eventos.</p>
+<p><strong>Blocos Principais</strong><br>
+1. Conceitos de streaming e eventos (CDC, filas, partições)<br>
+2. Ingestão em tempo real com <strong>Kafka</strong><br>
+3. PySpark e processamento distribuído 4. Orquestração com <strong>Airflow</strong><br>
+5. Monitoração e alertas (logs, falhas, métricas)<br>
+6. Performance e otimização de custo</p>
+<p><strong>Entrega</strong><br>
+- Pipeline em tempo real com DAG completa e observabilidade básica.<br>
+- Entendimento prático de orquestração e escalabilidade.</p>
+<blockquote class="blockquote">
+<p>“Aprenda o que realmente diferencia um pipeline profissional: automação, tempo real e orquestração com Airflow e Kafka.”</p>
+</blockquote>
+</section>
+<section id="formato" class="level2">
+<h2 class="anchored" data-anchor-id="formato">Formato</h2>
+<ul>
+<li><strong>Aulas gravadas, curtas e progressivas</strong><br>
+</li>
+<li><strong>Exercícios práticos em SQL, dbt e nas demais ferramentas</strong>, sempre com passo a passo e soluções<br>
+</li>
+<li><strong>Casos com JSONs e CSVs</strong> (simulando e-commerce e marketing)<br>
+</li>
+<li><strong>Mentoria e comunidade</strong> para dúvidas e projetos<br>
+</li>
+<li><strong>Repositório GitHub aberto</strong> com dataset e exemplos</li>
+</ul>
+</section>
+<section id="preço" class="level2">
+<h2 class="anchored" data-anchor-id="preço">Preço <a name="preco"></a></h2>
+<p>O curso foi separado em fases, cada uma vendida como um produto separado (ou com desconto caso queira o curso completo). A fase 0 é gratuita.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 27%">
+<col style="width: 26%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Curso</th>
+<th>Preço Potencial</th>
+<th>Motivação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fase 1</strong></td>
+<td>Fundamentos</td>
+<td>R$ 599</td>
+<td><em>Agora você domina o fluxo de dados. Está pronto para levar isso à produção</em>.</td>
+</tr>
+<tr class="even">
+<td><strong>Fase 2</strong></td>
+<td>Especialização 1 (nível júnior → pleno)</td>
+<td>R$ 399</td>
+<td><em>Seu pipeline funciona - mas precisa ser automatizado e lidar com falhas para rodar em Produção</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Fase 3</strong></td>
+<td>Especialização 2 (nível pleno → sênior)</td>
+<td>R$ 399</td>
+<td><em>Seu pipelines está vivo e automatizado, rodando continuamente e reagindo a eventos.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Curso Completo - sem desconto: <strong>R$1397</strong><br>
+</li>
+<li>Curso Completo - com desconto: <strong>R$ 999</strong> (leve a última fase de graça!)</li>
+</ul>
+</section>
+<section id="inscreva-se" class="level2">
+<h2 class="anchored" data-anchor-id="inscreva-se">Inscreva-se <a name="formulario"></a></h2>
+<p>Quer ser avisado quando abrirem as inscrições?</p>
+<iframe src="" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+Carregando…
+</iframe>
+<hr>
+<a name="sobre"></a>
+<p align="center">
+<img src="images/caio.jpg" alt="Caio Velasco" width="180" style="border-radius: 50%; margin-top: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+</p>
+<p><strong>Caio Velasco</strong> é Engenheiro Mecânico <em>Cum Laude</em> pela <strong>UFRJ</strong> e Mestre em Economia e Políticas Públicas pela <strong>UCLA</strong>, com bolsa da Fundação Lemann. Atualmente mora em Barcelona, na Espanha.</p>
+<p>Depois de pausar um doutorado em Economia na Holanda durante a pandemia, passou a atuar remotamente em <strong>Projetos de Engenharia e Ciência de Dados</strong>, ajudando empresas dos EUA, Europa e Brasil a construírem <strong>plataformas modernas de dados</strong>.</p>
+<p>A paixão por ensinar o levou a criar cursos que unem <strong>fundamentos de engenharia, clareza conceitual e prática real</strong> - mostrando <strong>como pensar como um engenheiro de dados</strong>, e não apenas escrever código.</p>
+<blockquote class="blockquote">
+<p>💡 “Meu objetivo é ensinar com clareza e propósito - conectando o pensamento analítico à prática real de engenharia de dados.”</p>
+</blockquote>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Caio Velasco</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Construído com ❤️ e Quarto</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

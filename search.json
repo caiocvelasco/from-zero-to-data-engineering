@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "",
+    "text": "Nesta jornada, você vai aprender como os dados realmente fluem: desde arquivos brutos (como o .CSV) e APIs com JSONS complexos, até sistemas automatizados prontos para alimentar análises, relatórios e produtos de dados."
+  },
+  {
+    "objectID": "index.html#motivação",
+    "href": "index.html#motivação",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Motivação ",
+    "text": "Motivação \nAprendi Engenharia de Dados do zero. Não foi em um curso formal nem em um programa de treinamento, mas ao longo de uma jornada real de trabalho e reinvenção. Nessa jornada, um mentor que me orientou.\nDepois de concluir meu mestrado nos EUA, embarquei num PhD de prestígio na Holanda. Infelizmente, a vida é incerta e tive que retornar ao Brasil por conta da Pandemia, sem finalizar o programa.\nDecidi me tornar PJ no Brasil e começar a trabalhar para consultorias de dados americanas.\nSem querer, descobri um novo mundo: pipelines complexos, warehouses modernos e times inteiros organizados em torno do Snowflake e dbt, além de boas práticas que, até então, eu só via em posts no LinkedIn.\nFoi nesse contexto “aleatório” que entrei em Engenharia de Dados. Comecei a construir pipelines completos do zero: desde a ingestão de dados (APIs, S3, CSVs) até o versionamento e a modelagem incremental com dbt-core.\nTrabalhei com empresas de diversos países - desde consultorias de dados nos EUA a projetos com a FENG Brasil, responsável por usar dados para impulsionar os programas de sócio-torcedor dos maiores clubes do país (Flamengo, Fluminense, Vasco, Botafogo, São Paulo, Internacional, Coritiba, etc) - implementando o dbt, estratégias incrementais e ajudando em projetos de Machine Learning.\nDo outro lado do oceano, a vida também caminhava: retornei à Europa como Nômade Digital, estabeleci base em Barcelona e iniciei o processo de cidadania espanhola - uma decisão pessoal que acabou simbolizando essa jornada de autonomia e aprendizado contínuo.\nEssa trajetória me deu liberdade, propósito e uma vontade enorme de compartilhar o que aprendi - passo a passo - com quem também quer trilhar esse caminho.\nNão sou nenhum “Jedi” dos dados e não tenho “10 anos” de experiência. Mas acredito que posso te ajudar a sair do zero. 😉"
+  },
+  {
+    "objectID": "index.html#objetivo-do-curso",
+    "href": "index.html#objetivo-do-curso",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Objetivo do Curso ",
+    "text": "Objetivo do Curso \nDar uma formação sólida em Engenharia de Dados Moderna, mostrando como projetar, construir e operar pipelines reais, de forma mais **agnóstica possível* em relação ao Data Warehouse usado (Snowflake, BigQuery, Databricks, etc.).\nVocê vai compreender:\n\nComo os dados são extraídos, transformados e governados em pipelines reais.\n\nComo construir sistemas de dados que não quebram, são testáveis e fáceis de escalar.\n\nE como aplicar práticas de engenharia de software (CI/CD, versionamento, automação) ao mundo dos dados."
+  },
+  {
+    "objectID": "index.html#pré-requisitos",
+    "href": "index.html#pré-requisitos",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Pré-requisitos ",
+    "text": "Pré-requisitos \nEste curso é do ZERO!\nEle foi pensado para quem quer entender o que realmente acontece dentro de um pipeline - mesmo que nunca tenha trabalhado como Engenheiro de Dados antes.\nHá apenas 1 pré-requisito que te recomendo fazer para te deixar mais confortável: - Curso Básico de SQL (gratuito, em torno de 4 horas): https://www.w3schools.com/sql/default.asp\nO restante, eu vou ensinar."
+  },
+  {
+    "objectID": "index.html#conteúdo---curso-completo-em-3-fases",
+    "href": "index.html#conteúdo---curso-completo-em-3-fases",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Conteúdo - Curso Completo em 3 Fases",
+    "text": "Conteúdo - Curso Completo em 3 Fases\nO curso foi separado em fases, cada fase será um produto vendido separadamente, como verá mais adiante.\nA fase 0, é gratuita. Ela é apenas a preparação do seu computador.\n\n\n\n\n\n\n\n\n\n\n\nFase\nNome\nTema\nFoco\nProduto final\nValor Percebido\n\n\n\n\n0\nAmbiente e Setup\nPreparação da máquina e do ambiente de trabalho\nInstalação do VS Code, Git, Python, criação de venv, conta no GitHub, setup de repositório e acesso ao warehouse\nAmbiente local funcional e organizado, pronto para rodar pipelines\nAgora eu tenho uma máquina configurada como a de um engenheiro de dados profissional.\n\n\n1\nDo Zero à Engenharia de Dados\nFundamentos e pipeline limpo\nEL→T, SQL, modelagem, camadas Bronze–Silver–Gold\nPipeline estático e limpo, rodando localmente ou no warehouse\nAprendi como os dados fluem - consigo montar meu próprio data warehouse.\n\n\n2\nDo Pipeline ao Sistema Confiável\nAutomação, testes e governança\ndbt, testes de qualidade, CI/CD, GitHub Actions, RBAC\nPipeline automatizado, versionado, testado e monitorado\nMeu pipeline é de verdade - roda sozinho e detecta erros.\n\n\n3\nO Mundo em Tempo Real\nEscalabilidade e orquestração\nAirflow, Kafka, PySpark, monitoração e performance\nPipeline streaming + DAG completa de orquestração\nConsigo lidar com dados em tempo real e coordenar jobs complexos."
+  },
+  {
+    "objectID": "index.html#fase-1-do-zero-à-engenharia-de-dados",
+    "href": "index.html#fase-1-do-zero-à-engenharia-de-dados",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Fase 1 – Do Zero à Engenharia de Dados",
+    "text": "Fase 1 – Do Zero à Engenharia de Dados\nObjetivo\nEntender como os dados fluem, como se transformam e como modelar um pipeline limpo e eficiente.\nBlocos Principais\n1. Como os dados se movem (ETL vs ELT e Medallion Architecture)\n2. SQL e modelagem (DDL, DML, dimensões e fatos)\n3. Capturando mudanças (MERGE, Incrementais, SCD1 e SCD2)\n4. Fundamentos de uma arquitetura moderna (Foco no Snowflake - visão agnóstica)\n5. Construindo o primeiro pipeline EL→T end-to-end\n6. Modelagem e camadas Bronze–Silver–Gold\nEntrega\n- Pipeline completo (JSON + CSV → warehouse → tabelas na última camada).\n- Documentação clara e lógica de modelagem.\n\n“Aprenda a construir do zero um pipeline moderno, entendendo como os dados realmente fluem dentro de empresas modernas.”"
+  },
+  {
+    "objectID": "index.html#fase-2-do-pipeline-ao-sistema-confiável",
+    "href": "index.html#fase-2-do-pipeline-ao-sistema-confiável",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Fase 2 – Do Pipeline ao Sistema Confiável",
+    "text": "Fase 2 – Do Pipeline ao Sistema Confiável\nObjetivo\nTransformar o pipeline em algo que poderia rodar em produção - com testes, versionamento, CI/CD e governança.\nBlocos Principais\n1. Introdução ao dbt e Implementação (projeto modular, models, sources, refs)\n2. Testes de qualidade (not_null, unique, relationships, accepted_values)\n3. Documentação e lineage (dbt docs e metadados)\n4. Integração Contínua (GitHub Actions + deploy automático)\n5. Governança e RBAC\n6. Mini orquestração (Snowflake Tasks, Cloud Scheduler)\nEntrega\n- Projeto dbt completo, testado, versionado e com deploy automatizado.\n- Workflow confiável e auditável.\n\n“Transforme seu pipeline em algo que poderia rodar em produção - com testes, governança e deploy automático.”"
+  },
+  {
+    "objectID": "index.html#fase-3-o-mundo-em-tempo-real",
+    "href": "index.html#fase-3-o-mundo-em-tempo-real",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Fase 3 – O Mundo em Tempo Real",
+    "text": "Fase 3 – O Mundo em Tempo Real\nObjetivo\nDar o salto para pipelines vivos e automatizados, que rodam continuamente e reagem a eventos.\nBlocos Principais\n1. Conceitos de streaming e eventos (CDC, filas, partições)\n2. Ingestão em tempo real com Kafka\n3. PySpark e processamento distribuído 4. Orquestração com Airflow\n5. Monitoração e alertas (logs, falhas, métricas)\n6. Performance e otimização de custo\nEntrega\n- Pipeline em tempo real com DAG completa e observabilidade básica.\n- Entendimento prático de orquestração e escalabilidade.\n\n“Aprenda o que realmente diferencia um pipeline profissional: automação, tempo real e orquestração com Airflow e Kafka.”"
+  },
+  {
+    "objectID": "index.html#formato",
+    "href": "index.html#formato",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Formato",
+    "text": "Formato\n\nAulas gravadas, curtas e progressivas\n\nExercícios práticos em SQL, dbt e nas demais ferramentas, sempre com passo a passo e soluções\n\nCasos com JSONs e CSVs (simulando e-commerce e marketing)\n\nMentoria e comunidade para dúvidas e projetos\n\nRepositório GitHub aberto com dataset e exemplos"
+  },
+  {
+    "objectID": "index.html#preço",
+    "href": "index.html#preço",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Preço ",
+    "text": "Preço \nO curso foi separado em fases, cada uma vendida como um produto separado (ou com desconto caso queira o curso completo). A fase 0 é gratuita.\n\n\n\n\n\n\n\n\n\nFase\nCurso\nPreço Potencial\nMotivação\n\n\n\n\nFase 1\nFundamentos\nR$ 599\nAgora você domina o fluxo de dados. Está pronto para levar isso à produção.\n\n\nFase 2\nEspecialização 1 (nível júnior → pleno)\nR$ 399\nSeu pipeline funciona - mas precisa ser automatizado e lidar com falhas para rodar em Produção\n\n\nFase 3\nEspecialização 2 (nível pleno → sênior)\nR$ 399\nSeu pipelines está vivo e automatizado, rodando continuamente e reagindo a eventos.\n\n\n\n\nCurso Completo - sem desconto: R$1397\n\nCurso Completo - com desconto: R$ 999 (leve a última fase de graça!)"
+  },
+  {
+    "objectID": "index.html#inscreva-se",
+    "href": "index.html#inscreva-se",
+    "title": "Engenharia de Dados do Zero à Produção.",
+    "section": "Inscreva-se ",
+    "text": "Inscreva-se \nQuer ser avisado quando abrirem as inscrições?\n\nCarregando…\n\n\n\n\n\n\nCaio Velasco é Engenheiro Mecânico Cum Laude pela UFRJ e Mestre em Economia e Políticas Públicas pela UCLA, com bolsa da Fundação Lemann. Atualmente mora em Barcelona, na Espanha.\nDepois de pausar um doutorado em Economia na Holanda durante a pandemia, passou a atuar remotamente em Projetos de Engenharia e Ciência de Dados, ajudando empresas dos EUA, Europa e Brasil a construírem plataformas modernas de dados.\nA paixão por ensinar o levou a criar cursos que unem fundamentos de engenharia, clareza conceitual e prática real - mostrando como pensar como um engenheiro de dados, e não apenas escrever código.\n\n💡 “Meu objetivo é ensinar com clareza e propósito - conectando o pensamento analítico à prática real de engenharia de dados.”"
+  }
+]
