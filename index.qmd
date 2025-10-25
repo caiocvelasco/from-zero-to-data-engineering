@@ -154,8 +154,11 @@ Transformar o pipeline em algo que **poderia rodar em produção** - com testes,
 **Visão de Negócio**  
 Com a operação madura, o e-commerce quer monitorar em tempo real o desempenho das campanhas e detectar quedas de performance ou picos de vendas.
 
+Agora que os dados estão limpos e os relatórios são atualizados automaticamente, o próximo passo é reagir enquanto as coisas acontecem - ver uma venda no momento em que ela ocorre e ajustar campanhas instantaneamente. É o que chamamos de engenharia de dados em tempo real.
+-> _Kafka é o **mensageiro**, e PySpark é o **motor**_.
+
 O engenheiro de dados implementa orquestração e streaming, permitindo que:  
-- Novas vendas sejam processadas assim que chegam da API, relatórios sejam atualizados automaticamente (`Airflow` DAGs), alertas sejam disparados quando houver anomalias.
+- Novas vendas sejam processadas assim que chegam da API, relatórios sejam atualizados automaticamente (`Airflow DAGs`), e alertas sejam disparados quando houver anomalias.
 
 Esse tipo de sistema orienta decisões diárias de marketing - como ajustar orçamentos ou prever picos de demanda - e serve de base para análises de churn e conversão em um futuro curso de _Machine Learning_.
 
